@@ -1,0 +1,164 @@
+html {
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-family: "Neue Montreal", Helvetica, Arial, sans-serif;
+    font-size: 1.4rem;
+    color: #222222;
+    background-color: #FFFFFF;
+    line-height: 1.428571429;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.navbar {
+    background-color: #1D4254;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 8rem;
+}
+
+.navbar__logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    margin-right: 2.2rem;
+    width: 6rem;
+    height: 6rem;
+}
+
+.logo__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.search {
+    position: relative;
+}
+
+.search__input, .modal__input {
+    width: 25rem;
+    height: 3.8rem;
+    background-color: #336278;
+    border: .1rem solid #336278;
+    border-radius: 2rem;
+    color: #FFFFFF;
+    outline: none;
+    font-size: 1.5rem;
+    padding: 1.2rem .5rem 1.2rem 3.5rem;
+    line-height: 3rem;
+    font-family: 'Comic Neue', cursive;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.search__input::placeholder, .modal__input::placeholder {
+    color: #FFFFFF;
+    font-weight: 300;
+    font-family: 'Comic Neue', cursive;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.search .fa-search {
+    font-size: 1.45rem;
+    color: #FFFFFF;
+    position: absolute;
+    top: 1.2rem;
+    left: 1.3rem;
+}
+
+.navbar__items {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.navbar__item {
+    font-size: 1.5rem;
+    margin-right: 2rem;
+}
+
+.navbar__item a {
+    color: #FFFFFF;
+    font-weight: 300;
+    transition: color .9s ease-in-out;
+}
+
+.navbar__item a:hover {
+    color: #95DF00;
+}
+
+.navbar__avatar {
+    width: 3rem;
+    height: 3rem;
+}
+
+.navbar__avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.navbar__bars {
+    display: none;
+}
+
+.fa-bars {
+    font-size: 2.8rem;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+/* media queries */
+@media screen and (max-width: 700px) {
+    .navbar {
+        position: relative;
+        height: 6rem;
+        justify-content: space-between;
+    }
+
+    .navbar__bars {
+        display: block;
+        margin-left: 1.4rem;
+    }
+
+    .navbar__items, .search {
+        display: none;
+    }
+
+    .logo {
+        position: absolute;
+        right: 47%;
+        transform: translateX(47%);
+    }
+}
+
+
+/* media queries */
+@media screen and (max-width: 400px) {
+    .logo {
+        position: absolute;
+        right: 42.5%;
+        transform: translateX(42.5%);
+        height: 4rem;
+        width: 4rem;
+    }
+
+    #bars {
+        font-size: 2.2rem;
+    }
+ 
+}
