@@ -1,0 +1,135 @@
+.main{
+    width: 100%;
+}
+
+.footer {
+    background-color: #FFFFFF;
+    border-top: .1rem solid #F2F2F2;
+    padding: 6rem 0;
+    width: 100%;
+}
+
+.footer__content {
+    padding: 1.5rem;
+}
+
+.footer__top {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer__item {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__item a {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    font-weight: 400;
+    color: #656565;
+    padding-top: .2rem;
+    transition: border .9s ease-in-out;
+}
+
+.footer__item a:hover {
+    border-bottom: .1rem solid #656565;
+}
+
+
+.footer__middle {
+    border-top: .1rem solid #F2F2F2;
+    border-bottom: .1rem solid #F2F2F2;
+    margin: 3rem 0;
+    padding: 1.5rem 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.social__icons {
+    display: flex;
+}
+
+.social__icons div {
+    width: 3rem;
+    height: 3rem;
+    margin-right: .4rem;
+    border-radius: 50%;
+    background-color: #F2F2F2;
+    text-align: center;
+}
+
+.social, .mobile {
+    display: flex;
+    align-items: center;
+    /* border: .2rem solid #656565; */
+    padding: 1.5rem 0;
+}
+
+.fa-brands {
+    font-size: 1.4rem;
+    line-height: 3rem;
+    text-align: center;
+    cursor: pointer;
+    color: #656565;
+    transition: color .6s ease-out;
+}
+
+.fa-brands:hover {
+    color: #14A800;
+}
+
+.social {
+    transform: translateX(-19%);
+}
+.mobile {
+    transform: translateX(26%);
+}
+.social__title, .mobile__title {
+    margin-right: 2.5rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.footer__bottom {
+    display: flex;
+    justify-content: center;
+}
+
+.copyright {
+    padding: 3rem 0;
+    line-height: 1.5rem;
+    color: #656565;
+    font-size: 1.3rem;
+}
+
+/* media queries */
+@media screen and (max-width: 700px) {
+    .footer__top{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer__item {
+        margin: 2rem 0;
+    }
+
+    .footer__item a {
+        margin-bottom: .6rem;
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+
+    .footer__middle {
+        flex-direction: column;
+    }
+
+    .social {
+        transform: translateX(0%);
+    }
+
+    .mobile {
+        border-top: .1rem solid #F2F2F2;
+        transform: translateX(0%);
+    }
+}
