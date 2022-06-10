@@ -1,0 +1,44 @@
+.alert {
+  padding: 20px;
+  background-color: #a500a8;
+  color: white;
+  width: 40rem;
+  height: 10rem;
+  border-radius: .5rem;
+  position: fixed;
+  top: 8%;
+  left: 40%;
+  z-index: 1000;
+}
+
+.closeBtn {
+  margin-left: 15px;
+  color: #F2F2F2;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.close {
+    display: none;
+}
+
+.open {
+    display: block;
+}
+
+@media screen and (max-width: 500px) { 
+    .alert {
+        left: 20%;
+        width: 25rem;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 999px) {
+    .alert {
+        left: 25%;
+    }
+}
