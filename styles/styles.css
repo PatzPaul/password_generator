@@ -1,5 +1,5 @@
 html {
-    font-size: 62.5%;
+    font-size: 75%;
 }
 
 * {
@@ -48,7 +48,8 @@ body {
     position: relative;
 }
 
-.search__input, .modal__input {
+.search__input,
+.modal__input {
     width: 25rem;
     height: 3.8rem;
     background-color: #336278;
@@ -63,7 +64,8 @@ body {
     font-family: 'Josefin Sans', sans-serif;
 }
 
-.search__input::placeholder, .modal__input::placeholder {
+.search__input::placeholder,
+.modal__input::placeholder {
     color: #FFFFFF;
     font-weight: 300;
     font-family: 'Comic Neue', cursive;
@@ -91,7 +93,7 @@ body {
 
 .navbar__item a {
     color: #FFFFFF;
-    font-weight: 300;
+    font-weight: 400;
     transition: color .9s ease-in-out;
 }
 
@@ -122,23 +124,23 @@ body {
     cursor: pointer;
 }
 
+
 /* media queries */
+
 @media screen and (max-width: 700px) {
     .navbar {
         position: relative;
         height: 6rem;
         justify-content: space-between;
     }
-
     .navbar__bars {
         display: block;
         margin-left: 1.4rem;
     }
-
-    .navbar__items, .search {
+    .navbar__items,
+    .search {
         display: none;
     }
-
     .logo {
         position: absolute;
         right: 47%;
@@ -148,6 +150,7 @@ body {
 
 
 /* media queries */
+
 @media screen and (max-width: 400px) {
     .logo {
         position: absolute;
@@ -156,9 +159,7 @@ body {
         height: 4rem;
         width: 4rem;
     }
-
     #bars {
         font-size: 2.2rem;
     }
- 
 }
