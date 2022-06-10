@@ -53,14 +53,11 @@
 }
 
 .form {
-    margin: 3rem 2rem 2rem;
-    border-radius: 0 .3rem .3rem 0;
-}
-
-.form div {
-    display: flex;
-    flex-direction: column;
-    margin: 2rem;
+    background-color: #fafdfc;
+    box-shadow: 0px 2px 10px rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    width: 350px;
+    max-width: 100%;
 }
 
 label {
@@ -78,21 +75,72 @@ button {
     padding-left: 1rem;
 }
 
-.btn {
-    margin: 6rem 0;
-    font-size: 1.4rem;
-    color: #F2EFFB;
-    border-radius: .3rem;
-    cursor: pointer;
-    font-weight: 400;
-    text-align: center;
-    background-color: #14A800;
-    border: .1rem solid #14A800;
-    transition: background-color .6s ease-out;
+.result-container {
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    font-size: 15px;
+    letter-spacing: 1px;
+    padding: 12px 10px;
+    height: 50px;
+    max-width: 100%;
+    border-radius: 10px;
 }
 
-.btn:hover {
-    background-color: #107702;
+.result-container #result {
+    word-wrap: break-word;
+    max-width: calc(100% - 40px);
+    color: #333;
+}
+
+.result-container .btn {
+    font-size: 20px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    height: 40px;
+    width: 40px;
+}
+
+.setting {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.btn {
+    border: none;
+    color: #222;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 8px 12px;
+    background-color: #14a80083;
+    border-radius: 5px;
+}
+
+.btn-large {
+    display: block;
+    width: 100%;
+}
+
+input[type="checkbox"] {
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    background-color: rgb(20, 220, 143);
+    outline: none;
+    border-radius: 5px;
+    box-shadow: inset 0 0 3.5px #BEBCBE;
+    transition: 0.3s;
+}
+
+input:checked[type="checkbox"] {
+    background-color: #00C853;
 }
 
 @media screen and (max-width: 499px) {
@@ -121,11 +169,6 @@ button {
     .active {
         margin-left: 26rem;
     }
-    .form {
-        margin: 3rem 2rem 2rem 2rem;
-        border-radius: 0 .3rem .3rem 0;
-        width: 100%;
-    }
 }
 
 @media screen and (min-width: 500px) and (max-width: 999px) {
@@ -153,11 +196,6 @@ button {
     }
     .active {
         margin-left: 73%;
-    }
-    .form {
-        width: 100%;
-        margin: 3rem 2rem 2rem;
-        border-radius: 0 .3rem .3rem 0;
     }
 }
 
