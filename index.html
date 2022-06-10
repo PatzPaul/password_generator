@@ -1,155 +1,177 @@
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Keygen - Password generator</title>
-        <meta name="description" content="password key generator">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" href="./images/favicon.ico" type="image/ico" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-            integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-            crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
-            rel="stylesheet">
-        <link rel="stylesheet" href="./styles/styles.css">
-        <link rel="stylesheet" href="./styles/content.css">
-        <link rel="stylesheet" href="./styles/footer.css">
-    </head>
-    <body>
-        <!-- Navigation Section -->
-        <nav class="navbar">
-            <div class="navbar__bars">
-                <i class="fas fa-bars" id="bars"></i>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Keygen - Password generator</title>
+    <meta name="description" content="password key generator">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="./images/favicon.ico" type="image/ico" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/content.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+</head>
+
+<body>
+    <!-- Navigation Section -->
+    <nav class="navbar">
+        <div class="navbar__bars">
+            <i class="fas fa-bars" id="bars"></i>
+        </div>
+        <div class="navbar__logo">
+            <div class="logo">
+                <img class="logo__img" src="./images/logo.png" alt="logo">
             </div>
-            <div class="navbar__logo">
-                <div class="logo">
-                    <img class="logo__img" src="./images/logo.png" alt="logo">
-                </div>
-                <div class="search">
-                    <i class="fas fa-search"></i>
-                    <input type="text" class="search__input" placeholder="Search for security hacks">
-                </div>
+            <div class="search">
+                <i class="fas fa-search"></i>
+                <input type="text" class="search__input" placeholder="Search for security hacks">
             </div>
-            <ul class="navbar__items">
-                <li class="navbar__item"><a href="#">Help Home</a></li>
-                <li class="navbar__item"><a href="#">What's New</a></li>
-                <li class="navbar__item"><a href="#">Resources</a></li>
-                <div class="navbar__avatar">
-                    <img src="./images/user5.jpg" alt="user avatar" />
-                </div>
-            </ul>
-        </nav>
-        <!-- End of Navigation -->
-        <!-- Main Section -->
-        <main class="main">
-            <!-- Start of Main Content -->
-            <section class="content">
-                <!-- Start of Form Content -->
-                <div class="content__left">
-                    <div class="form__container">
-                        <div class="side__items">
-                            <div class="side__item">
-                                <div class="side__icon">
-                                    <i class="fa-solid fa-check"></i>
-                                </div>
-                                <h3>Quick and free strong passwords for you.</h3>
-                                <p>Enter your password length and it's use to generate a strong password.</p>
+        </div>
+        <ul class="navbar__items">
+            <li class="navbar__item"><a href="#">Help Home</a></li>
+            <li class="navbar__item"><a href="#">What's New</a></li>
+            <li class="navbar__item"><a href="#">Resources</a></li>
+            <div class="navbar__avatar">
+                <img src="./images/user5.jpg" alt="user avatar" />
+            </div>
+        </ul>
+    </nav>
+    <!-- End of Navigation -->
+    <!-- Main Section -->
+    <main class="main">
+        <!-- Start of Main Content -->
+        <section class="content">
+            <!-- Start of Form Content -->
+            <div class="content__left">
+                <div class="form__container">
+                    <div class="side__items">
+                        <div class="side__item">
+                            <div class="side__icon">
+                                <i class="fa-solid fa-check"></i>
                             </div>
-                            <div class="side__item">
-                                <div class="side__icon">
-                                    <i class="fa-solid fa-check"></i>
-                                </div>
-                                <h3>Cross-platform solution.</h3>
-                                <p>Generate and use your password on any device.</p>
+                            <h3>Quick and free strong passwords for you.</h3>
+                            <p>Enter your password length and it's use to generate a strong password.</p>
+                        </div>
+                        <div class="side__item">
+                            <div class="side__icon">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <h3>Cross-platform solution.</h3>
+                            <p>Generate and use your password on any device.</p>
+                        </div>
+                    </div>
+                    <form action="#" class="form">
+                        <div class="form__header">
+                            <h2>Generate Password</h2>
+                        </div>
+                        <div class="result-container">
+                            <span id="result"></span>
+                            <button class="btn" id="clipboard">
+                                <i class="far fa-clipboard"></i>
+                            </button>
+                        </div>
+                        <div class="settings">
+                            <div class="setting">
+                                <label>Password length (Max:20)</label>
+                                <input type="number" id="length" min='4' max='20' value='20' />
+                            </div>
+                            <div class="setting">
+                                <label>Include uppercase letters</label>
+                                <input type="checkbox" id="uppercase" checked class="toggle" />
+                            </div>
+                            <div class="setting">
+                                <label>Include lowercase letters</label>
+                                <input type="checkbox" id="lowercase" checked class="toggle" />
+                            </div>
+                            <div class="setting">
+                                <label>Include numbers</label>
+                                <input type="checkbox" id="numbers" checked class="toggle" />
+                            </div>
+                            <div class="setting">
+                                <label>Include symbols</label>
+                                <input type="checkbox" id="symbols" checked class="toggle" />
                             </div>
                         </div>
-                        <form action="#" class="form">
-                            <div class="form__header">
-                                <h2>Generate Password</h2>
+                        <button class="btn btn-large" id="generate">
+            Generate password
+        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- End of Main Content -->
+        <!-- Start of Footer -->
+        <footer class="footer">
+            <div class="footer__content">
+                <div class="footer__top">
+                    <div class="footer__item">
+                        <a href="#">About Us</a>
+                        <a href="#">Community</a>
+                    </div>
+                    <div class="footer__item">
+                        <a href="#">Trust, Safety & Security</a>
+                        <a href="#">Help & Support</a>
+                        <a href="#">Keygen Foundation</a>
+                    </div>
+                    <div class="footer__item">
+                        <a href="#">Term of Service</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Accessibility</a>
+                    </div>
+                    <div class="footer__item">
+                        <a href="#">Desktop App</a>
+                        <a href="#">Cookie Policy</a>
+                        <a href="#">Enterprise Solution</a>
+                    </div>
+                </div>
+                <div class="footer__middle">
+                    <div class="social">
+                        <h2 class="social__title">Follow us</h2>
+                        <div class="social__icons">
+                            <div>
+                                <i class="fa-brands fa-facebook"></i>
                             </div>
                             <div>
-                                <label for="message">Message</label>
-                                <input type="text" placeholder="message">
+                                <i class="fa-brands fa-linkedin"></i>
                             </div>
                             <div>
-                                <label for="message">Length</label>
-                                <input type="text" placeholder="password size">
+                                <i class="fa-brands fa-twitter"></i>
                             </div>
-                            <button type="submit" class="btn">Submit</button>
-                        </form>
+                            <div>
+                                <i class="fa-brands fa-youtube"></i>
+                            </div>
+                            <div>
+                                <i class="fa-brands fa-instagram"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mobile">
+                        <h2 class="mobile__title">Mobile App</h2>
+                        <div class="social__icons">
+                            <div>
+                                <i class="fa-brands fa-apple"></i>
+                            </div>
+                            <div>
+                                <i class="fa-brands fa-android"></i>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </section>
-            <!-- End of Main Content -->
-            <!-- Start of Footer -->
-            <footer class="footer">
-                <div class="footer__content">
-                    <div class="footer__top">
-                        <div class="footer__item">
-                            <a href="#">About Us</a>
-                            <a href="#">Community</a>
-                        </div>
-                        <div class="footer__item">
-                            <a href="#">Trust, Safety & Security</a>
-                            <a href="#">Help & Support</a>
-                            <a href="#">Keygen Foundation</a>
-                        </div>
-                        <div class="footer__item">
-                            <a href="#">Term of Service</a>
-                            <a href="#">Privacy Policy</a>
-                            <a href="#">Accessibility</a>
-                        </div>
-                        <div class="footer__item">
-                            <a href="#">Desktop App</a>
-                            <a href="#">Cookie Policy</a>
-                            <a href="#">Enterprise Solution</a>
-                        </div>
-                    </div>
-                    <div class="footer__middle">
-                        <div class="social">
-                            <h2 class="social__title">Follow us</h2>
-                            <div class="social__icons">
-                                <div>
-                                    <i class="fa-brands fa-facebook"></i>
-                                </div>
-                                <div>
-                                    <i class="fa-brands fa-linkedin"></i>
-                                </div>
-                                <div>
-                                    <i class="fa-brands fa-twitter"></i>
-                                </div>
-                                <div>
-                                    <i class="fa-brands fa-youtube"></i>
-                                </div>
-                                <div>
-                                    <i class="fa-brands fa-instagram"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mobile">
-                            <h2 class="mobile__title">Mobile App</h2>
-                            <div class="social__icons">
-                                <div>
-                                    <i class="fa-brands fa-apple"></i>
-                                </div>
-                                <div>
-                                    <i class="fa-brands fa-android"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="footer__bottom">
-                        <span class="copyright">
+                <div class="footer__bottom">
+                    <span class="copyright">
                             &copy; 2020-2022 Keygen&reg; Global Inc.
                         </span>
-                    </div>
                 </div>
-            </footer>
-            <!-- End of Footer -->
-        </main>
-        <script src="./script.js" ></script>
-    </body>
+            </div>
+        </footer>
+        <!-- End of Footer -->
+    </main>
+    <script src="./script.js"></script>
+</body>
+
 </html>
