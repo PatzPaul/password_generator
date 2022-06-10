@@ -1,6 +1,6 @@
-.alert {
+.alert, .deleteAlert{
   padding: 20px;
-  background-color: #a500a8;
+  background-color: #0076a8;
   color: white;
   width: 40rem;
   height: 10rem;
@@ -9,6 +9,10 @@
   top: 8%;
   left: 40%;
   z-index: 1000;
+}
+
+.deleteAlert {
+    background-color: #dc143c;
 }
 
 .closeBtn {
@@ -28,6 +32,10 @@
 
 .open {
     display: block;
+}
+
+.delete {
+    background-color: #dc143c;
 }
 
 @media screen and (max-width: 500px) { 
