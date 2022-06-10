@@ -44,6 +44,16 @@ const passwordGenerator = (mess, size) => {
         })
         return invalid
     }
+
+    if (mess.length > 30) {
+        invalid = true
+        highlights.forEach(item => {
+            highlights[0].classList.add('error')
+            highlights[1].classList.remove('error')
+            highlights[0].textContent = 'Message should be less than 30 character!'
+        })
+        return invalid
+    }
     // convert size into an integer
     const passwordSize = parseInt(size)
 
@@ -111,9 +121,3 @@ submitButton.addEventListener('click', (event) => {
 
     contentRight.append(contentInfo)
 })
-
-
-
-
-
-
