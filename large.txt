@@ -1,1 +1,28 @@
 This is just the start of greatness
+
+{/* <div class="content__info">
+    <div class="message">
+        <div class="user__info">
+            <span>Database MySQL pass code.</span>
+        </div>
+
+        <div class="password">
+            <span>Password</span>
+            <div class="active">
+                Active
+            </div>
+        </div>
+
+        <div class="user__info">
+            <span>Date</span>
+        </div>
+    </div>
+    <div class="message__icons">
+        <div>
+            <i class="fa-solid fa-clipboard"></i>
+        </div>
+        <div class="delete">
+            <i class="fa-solid fa-eraser"></i>
+        </div>
+    </div>
+</div> */}
