@@ -1,9 +1,11 @@
 .content {
     width: 100%;
-    display: grid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     grid-template-columns: 15rem 1.5fr 1fr 15rem;
     grid-template-rows: repeat(3, min-content);
-    margin: 3rem 0 12rem;
+    margin: 3rem 0 3rem;
 }
 
 .content__left {
@@ -21,9 +23,10 @@
     height: 100%;
 }
 
-.side__items{
+.side__items {
     background-color: #14A800;
     border-radius: .3rem 0 0 .3rem;
+    width: 100%;
 }
 
 .side__item {
@@ -43,20 +46,21 @@
     margin-bottom: 1.2rem;
 }
 
-.side__items h3, .side__item p {
+.side__items h3,
+.side__item p {
     color: #F2EFFB;
     margin-bottom: .2rem;
 }
 
 .form {
-    margin: 3rem 1rem 2rem 4rem;
+    margin: 3rem 2rem 2rem;
     border-radius: 0 .3rem .3rem 0;
 }
 
 .form div {
     display: flex;
     flex-direction: column;
-    margin: 2rem 0 0;
+    margin: 2rem;
 }
 
 label {
@@ -64,7 +68,8 @@ label {
     font-size: 1.4rem;
 }
 
-input, button {
+input,
+button {
     width: 25rem;
     height: 3.4rem;
     outline: none;
@@ -90,7 +95,6 @@ input, button {
     background-color: #107702;
 }
 
-
 @media screen and (max-width: 499px) {
     .content {
         width: 95%;
@@ -98,101 +102,78 @@ input, button {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(2, max-content);
     }
-
     .content__left {
         grid-column: 1 / 1;
         grid-row: 1 / 2;
         box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-        margin-left: 1rem;
+        margin: 1rem 1rem 3rem;
         height: 90%;
         width: 100%;
-        margin-bottom: 3rem;
     }
-
     .form__container {
         height: 100%;
+        flex-wrap: wrap-reverse;
     }
-
-    input , button {
+    input,
+    button {
         width: 15rem;
     }
-
     .active {
         margin-left: 26rem;
-    } 
-
+    }
     .form {
         margin: 3rem 2rem 2rem 2rem;
         border-radius: 0 .3rem .3rem 0;
+        width: 100%;
     }
 }
 
-
 @media screen and (min-width: 500px) and (max-width: 999px) {
     .content {
-        width: 90%;
+        max-width: 90%;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(2, max-content);
     }
-
     .content__left {
         grid-column: 1 / 1;
         grid-row: 1 / 2;
         box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-        margin: 2rem 5rem;
+        margin: 2rem 3rem;
         height: 90%;
         width: 98%;
     }
-
-    .side__items {
-        width: 45%;
-    }
-
     .form__container {
         height: 100%;
+        flex-wrap: wrap-reverse;
     }
-
-    input , button {
+    input,
+    button {
         width: 25rem;
     }
-
     .active {
         margin-left: 73%;
     }
-
     .form {
-        margin: 3rem 2rem 2rem 2rem;
+        width: 100%;
+        margin: 3rem 2rem 2rem;
         border-radius: 0 .3rem .3rem 0;
     }
 }
 
 @media screen and (min-width: 1000px) and (max-width: 1299px) {
-    .content {
-        width: 100%;
-        display: grid;
-        grid-template-columns: 5rem 1fr 1fr 5rem 1fr 5rem;
-        grid-template-rows: repeat(2, max-content);
-        margin: 2rem auto;
-    }
-
     .content__left {
         grid-column: 2 / 4;
         grid-row: 1 / 2;
         box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
         margin: 2rem 3rem;
         height: 90%;
-        width: 80%;
+        max-width: 70%;
     }
-
-    input , button {
+    input,
+    button {
         width: 20rem;
     }
-
-    .side__items {
-        width: 45%;
-    }
-
     .active {
         margin-left: 22%;
     }
