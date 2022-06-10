@@ -3,6 +3,8 @@ const messageInput = document.querySelector('.message__input') //** Get user pas
 const passwordInput = document.querySelector('.password__input') //** Get users password length */
 const submitButton = document.querySelector('.btn') //** Form submission */
 
+const highlights = document.querySelectorAll('.highlight')
+
 // TODO Dynamically generate a card for the users information
 const contentInfo = document.createElement('div')
 const message = document.createElement('div')
@@ -31,37 +33,84 @@ iconCopy.className = 'fa-solid'
 iconDelete.className = 'fa-solid'
 
 
-spanMessage.textContent = 'Database MySQL pass code.'
-passwordMessage.appendChild(spanMessage)
+// TODO Generate a password based on the user parameter
+// *** Add an eventListener
+const passwordGenerator = (mess, size) => {
+    let invalid = false
+    if(mess === '' || size === '') {
+        invalid = true
+        highlights.forEach(item => {
+            item.classList.add('error')
+        })
+        return invalid
+    }
+    // convert size into an integer
+    const passwordSize = parseInt(size)
 
-spanPassword.textContent = 'Password'
-active.innerText = 'Active'
-password.appendChild(spanPassword)
-password.appendChild(active)
+    if (Number.isNaN(passwordSize) || (passwordSize < 8 || passwordSize > 20)) {
+        invalid = true
+        highlights.forEach(item => {
+            if(item.classList.contains('size')){
+                 highlights[0].classList.remove('error')
+                 highlights[1].classList.add('error')
+            }
+            item.classList.add('error')
+        })
+        return invalid
+    }
 
-spanDate.innerText = 'Date'
-dateMessage.appendChild(spanDate)
+    highlights.forEach(item => {
+        item.classList.remove('error')
+    })
+
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@$!_@'
+    const passwordString = Array(passwordSize).fill(characters).map(ch => {
+        return ch[Math.floor(Math.random() * ch.length)]
+    })
+    
+    return passwordString.join('')
+}
+
+submitButton.addEventListener('click', (event) => {
+    event.preventDefault()
+    const passwordLength = passwordInput.value.trim()
+    const useTextMessage = messageInput.value.trim()
+    const passwordString = passwordGenerator(useTextMessage, passwordLength)
+    const createdAt = new Date().toLocaleDateString()
+
+    if(passwordString === true){
+        return
+    }
+
+    spanMessage.textContent = useTextMessage
+    passwordMessage.appendChild(spanMessage)
+
+    spanPassword.textContent = passwordString
+    password.appendChild(spanPassword)
+
+    spanDate.innerText = createdAt
+    dateMessage.appendChild(spanDate)
 
 
-iconCopy.classList.add('fa-clipboard')
-iconDelete.classList.add('fa-eraser')
-divDelete.classList.add('delete')
+    iconCopy.classList.add('fa-clipboard')
+    iconDelete.classList.add('fa-eraser')
+    divDelete.classList.add('delete')
 
-divCopy.appendChild(iconCopy)
-divDelete.appendChild(iconDelete)
-messageIcons.appendChild(divCopy)
-messageIcons.appendChild(divDelete)
+    divCopy.appendChild(iconCopy)
+    divDelete.appendChild(iconDelete)
+    messageIcons.appendChild(divCopy)
+    messageIcons.appendChild(divDelete)
 
 
-message.appendChild(passwordMessage)
-message.appendChild(password)
-message.appendChild(dateMessage)
+    message.appendChild(passwordMessage)
+    message.appendChild(password)
+    message.appendChild(dateMessage)
 
-contentInfo.appendChild(message)
-contentInfo.appendChild(messageIcons)
+    contentInfo.appendChild(message)
+    contentInfo.appendChild(messageIcons)
 
-console.log(contentInfo)
-contentRight.appendChild(contentInfo)
+    contentRight.append(contentInfo)
+})
 
 
 

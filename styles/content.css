@@ -43,9 +43,12 @@
     text-align: center;
     background-color: #B0B1D1;
     font-size: 1.3rem;
-    line-height: 2.5rem;
     color: #F2EFFB;
     margin-bottom: 1.2rem;
+}
+
+.side__icon i {
+    line-height: 2.2rem;
 }
 
 .side__items h3, .side__item p {
@@ -79,7 +82,7 @@ input, button {
 }
 
 .btn {
-    margin: 6rem 0;
+    margin: 6rem 0 4rem;
     font-size: 1.4rem;
     color: #F2EFFB;
     border-radius: .3rem;
@@ -122,23 +125,6 @@ input, button {
    border-bottom: 1px solid  #F2EFFB;
 }
 
-.active {
-    margin-left: 31rem;
-    padding: .6rem .9rem;
-    font-size: 1.2rem;
-    font-weight: 300;
-    color: #F2EFFB;
-    background-color: #14A800;
-    border: .1rem solid #14A800;
-    border-radius: 2rem;
-    transition: opacity .3s ease-out;
-    cursor: pointer;
-}
-
-.active:hover {
-    opacity: .8;
-}
-
 .message__icons {
     display: flex;
     padding: 1.5rem 1rem;
@@ -148,7 +134,7 @@ input, button {
     width: 3rem;
     height: 3rem;
     text-align: center;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: #656565;
     background-color: #F2EFFB;
     border-radius: 50%;
@@ -159,7 +145,7 @@ input, button {
 }
 
 .message__icons div i {
-    line-height: 2.5rem;
+    line-height: 3rem;
 }
 
 .message__icons .delete {
@@ -169,6 +155,16 @@ input, button {
 
 .message__icons div:hover {
     opacity: 1;
+}
+
+.highlight {
+    margin-top: .3rem;
+    color: #14A800;
+    font-size: 1.3rem;
+}
+
+.error {
+    color: #FF0000;
 }
 
 
@@ -208,10 +204,6 @@ input, button {
     input , button {
         width: 15rem;
     }
-
-    .active {
-        margin-left: 63.25%;
-    } 
 
     .form {
         margin: 3rem 2rem 2rem 2rem;
@@ -261,10 +253,6 @@ input, button {
         margin: 2rem auto;
     }
 
-    .active {
-        margin-left: 80%;
-    }
-
     .form {
         margin: 3rem 2rem 2rem 2rem;
         border-radius: 0 .3rem .3rem 0;
@@ -300,9 +288,5 @@ input, button {
 
     .side__items {
         width: 45%;
-    }
-
-    .active {
-        margin-left: 60%;
     }
 }
