@@ -33,10 +33,6 @@ messageIcons.className = 'message__icons'
 iconCopy.className = 'fa-solid'
 iconDelete.className = 'fa-solid'
 
-{/* <div class="alert">
-  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-  This is an alert box.
-</div> */}
 
 // TODO ALERT BOX
 const alertContainer = document.createElement('div')

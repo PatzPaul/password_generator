@@ -16,7 +16,13 @@ body {
     background-color: #FFFFFF;
     line-height: 1.428571429;
     font-family: 'Josefin Sans', sans-serif;
-    position: relative;
+}
+
+.favicon {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .navbar {
@@ -123,11 +129,20 @@ body {
     cursor: pointer;
 }
 
+.highlight {
+    color: #14A800;
+    margin-top: .5rem;
+    font-size: 1.2rem;
+}
+
+.error {
+    color: #FF0000;
+}
+
 /* media queries */
 @media screen and (max-width: 700px) {
     .navbar {
         position: relative;
-        height: 6rem;
         justify-content: space-between;
     }
 
@@ -159,21 +174,25 @@ body {
         margin-bottom: .3rem;
         font-size: 1.6rem;
     }
+ 
 }
 
-
 /* media queries */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 400px) {
     .logo {
         position: absolute;
         right: 42.5%;
         transform: translateX(42.5%);
-        height: 4rem;
         width: 4rem;
+        height: 4rem;
     }
 
     #bars {
-        font-size: 2.2rem;
+        font-size: 1.6rem;
+    }
+
+    .navbar {
+        height: 6rem;
     }
  
 }
