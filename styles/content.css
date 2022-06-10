@@ -223,7 +223,6 @@ input, button {
 @media screen and (min-width: 500px) and (max-width: 999px) {
     .content {
         margin: 0 auto;
-        border: .2rem solid #FF0000;
         width: 95%;
         display: grid;
         grid-template-columns: 1fr;
