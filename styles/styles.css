@@ -144,11 +144,25 @@ body {
         right: 47%;
         transform: translateX(47%);
     }
+
+    .footer__top{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer__item {
+        margin: 2rem 0;
+    }
+
+    .footer__item a {
+        margin-bottom: .3rem;
+        font-size: 1.6rem;
+    }
 }
 
 
 /* media queries */
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
     .logo {
         position: absolute;
         right: 42.5%;
