@@ -4,6 +4,7 @@ const passwordInput = document.querySelector('.password__input') //** Get users 
 const submitButton = document.querySelector('.btn') //** Form submission */
 
 const highlights = document.querySelectorAll('.highlight')
+const modal = document.querySelector('.modal')
 
 // TODO Dynamically generate a card for the users information
 const contentInfo = document.createElement('div')
@@ -31,6 +32,31 @@ active.className = 'active'
 messageIcons.className = 'message__icons'
 iconCopy.className = 'fa-solid'
 iconDelete.className = 'fa-solid'
+
+
+// TODO ALERT BOX
+const alertContainer = document.createElement('div')
+const alertSpan = document.createElement('span')
+const alertText = document.createElement('p')
+alertSpan.className = 'closeBtn'
+alertContainer.className = 'alert'
+alertSpan.textContent = 'X'
+alertText.textContent = 'Password successfully copied to clipboard'
+alertContainer.appendChild(alertSpan)
+alertContainer.appendChild(alertText)
+
+// TODO ALERT BOX
+const deleteContainer = document.createElement('div')
+const deleteSpan = document.createElement('span')
+const deleteText = document.createElement('p')
+deleteSpan.className = 'closeBtn'
+deleteContainer.className = 'deleteAlert'
+deleteSpan.textContent = 'X'
+deleteText.textContent = 'User data successfully deleted'
+deleteContainer.appendChild(deleteSpan)
+deleteContainer.appendChild(deleteText)
+
+
 
 
 // TODO Generate a password based on the user parameter
@@ -120,4 +146,35 @@ submitButton.addEventListener('click', (event) => {
     contentInfo.appendChild(messageIcons)
 
     contentRight.append(contentInfo)
+})
+
+iconCopy.addEventListener('click', (event) => {
+    event.preventDefault()
+    const cb = navigator.clipboard
+    const password = spanPassword
+    cb.writeText(password.innerText).then(() => {
+        modal.appendChild(alertContainer)
+        modal.classList.add('open')
+         setTimeout(() => {
+             modal.classList.remove('open')
+             modal.classList.add('close')
+         }, 3000)
+    })
+})
+
+alertSpan.addEventListener('click', (event) => {
+    event.preventDefault()
+    modal.classList.remove('open')
+    modal.classList.add('close')
+})
+
+iconDelete.addEventListener('click', (event) => {
+    event.preventDefault()
+    contentInfo.remove()
+    modal.appendChild(deleteContainer)
+    modal.classList.add('open')
+    setTimeout(() => {
+        modal.classList.remove('open')
+        modal.classList.add('close')
+    }, 3000)
 })

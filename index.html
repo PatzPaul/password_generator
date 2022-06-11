@@ -1,24 +1,30 @@
-<!DOCTYPE html >
-<html lang="en">
-
+<!DOCTYPE html>
+<html>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Keygen - Password generator</title>
     <meta name="description" content="password key generator">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="./images/favicon.ico" type="image/ico" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
-    />
+    <link rel="icon" href="./images/favicon-32x32.png" type="image/png" />
+    <meta name="theme-color" content="rgb(255, 255, 255)">
+    <link rel="stylesheet" class="favicon"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/modal.css">
     <link rel="stylesheet" href="./styles/content.css">
     <link rel="stylesheet" href="./styles/footer.css">
 </head>
 
 <body>
+    <div class="modal close"></div>
     <!-- Navigation Section -->
     <nav class="navbar">
         <div class="navbar__bars">
@@ -43,11 +49,9 @@
         </ul>
     </nav>
     <!-- End of Navigation -->
-    <!-- Main Section -->
     <main class="main">
         <!-- Start of Main Content -->
         <section class="content">
-            <!-- Start of Form Content -->
             <div class="content__left">
                 <div class="form__container">
                     <div class="side__items">
@@ -55,58 +59,37 @@
                             <div class="side__icon">
                                 <i class="fa-solid fa-check"></i>
                             </div>
-                            <div>
-                                <h3>Quick and free strong passwords for you.</h3>
-                                <p>Enter your password length and select preferences to be included to generate a strong password.</p>
-                            </div>
+                            <h3>Quick and free strong passwords for you.</h3>
+                            <p>Enter your password length and it's use to generate a strong password.</p>
                         </div>
                         <div class="side__item">
                             <div class="side__icon">
                                 <i class="fa-solid fa-check"></i>
                             </div>
-                            <div>
-                                <h3>Cross-platform solution.</h3>
-                                <p>Generate and use your password on any device.</p>
-                            </div>
+                            <h3>Cross-platform solution.</h3>
+                            <p>Generate and use your password on any device.</p>
                         </div>
                     </div>
                     <form action="#" class="form">
                         <div class="form__header">
                             <h2>Generate Password</h2>
                         </div>
-                        <div class="result-container">
-                            <span id="result"></span>
-                            <button class="btn" id="clipboard">
-                                <i class="far fa-clipboard"></i>
-                            </button>
+                        <div>
+                            <label for="message">Message</label>
+                            <input type="text" placeholder="message" class="message__input">
+                            <span class="highlight commit">Provide a commit message!</span>
                         </div>
-                        <div class="settings">
-                            <div class="setting">
-                                <label>Password length (Max:20)</label>
-                                <input type="number" id="length" min='4' max='20' placeholder='20' />
-                            </div>
-                            <div class="setting">
-                                <label>Include uppercase letters</label>
-                                <input type="checkbox" id="uppercase" checked class="toggle" />
-                            </div>
-                            <div class="setting">
-                                <label>Include lowercase letters</label>
-                                <input type="checkbox" id="lowercase" checked class="toggle" />
-                            </div>
-                            <div class="setting">
-                                <label>Include numbers</label>
-                                <input type="checkbox" id="numbers" checked class="toggle" />
-                            </div>
-                            <div class="setting">
-                                <label>Include symbols</label>
-                                <input type="checkbox" id="symbols" checked class="toggle" />
-                            </div>
+                        <div>
+                            <label for="message">Length</label>
+                            <input type="text" placeholder="password size" class="password__input">
+                            <span class="highlight size">Password size should be a number! [8 - 20]</span>
                         </div>
-                        <button class="btn btn-large" id="generate">
-                            <strong>Generate Password</strong> 
-                        </button>
+                        <button type="submit" class="btn">Submit</button>
                     </form>
                 </div>
+            </div>
+            <!-- user information -->
+            <div class="content__right">
             </div>
         </section>
         <!-- End of Main Content -->
@@ -169,8 +152,8 @@
                 </div>
                 <div class="footer__bottom">
                     <span class="copyright">
-                            &copy; 2020-2022 Keygen&reg; Global Inc.
-                        </span>
+                        &copy; 2020-2022 Keygen&reg; Global Inc.
+                    </span>
                 </div>
             </div>
         </footer>

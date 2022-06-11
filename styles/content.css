@@ -1,11 +1,9 @@
 .content {
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: grid;
     grid-template-columns: 15rem 1.5fr 1fr 15rem;
     grid-template-rows: repeat(3, min-content);
-    margin: 3rem 0 3rem;
+    margin: 3rem 0 12rem;
 }
 
 .content__left {
@@ -15,7 +13,6 @@
     grid-row: 1 / 3;
     margin-left: 4rem;
     margin-bottom: 0;
-    border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
@@ -29,49 +26,42 @@
     height: 100%;
 }
 
-.side__items {
-    color: #000;
-    background-color: #eff0ee;
+.side__items{
+    background-color: #14A800;
     border-radius: .3rem 0 0 .3rem;
-    width: 100%;
 }
 
 .side__item {
-    display: flex;
-    flex-wrap: nowrap;
     margin: 2rem;
     padding: 1.3rem .3rem;
 }
 
 .side__icon {
-    padding: .9rem;
-    width: 3rem;
-    height: 3rem;
+    width: 2rem;
+    height: 2rem;
     border-radius: 50%;
     text-align: center;
-    background-color: #336278;
+    background-color: #B0B1D1;
     font-size: 1.3rem;
+    line-height: 2.5rem;
     color: #F2EFFB;
-    margin: 0 2rem 0 0;
-    margin-right: 2rem;
+    margin-bottom: 1.2rem;
 }
 
-.side__items h3,
-.side__item p {
-    color: #0f0f0f;
-    margin: .5rem 0 .2rem;
+.side__items h3, .side__item p {
+    color: #F2EFFB;
+    margin-bottom: .2rem;
 }
 
 .form {
-    background-color: #fafdfc;
-    box-shadow: 0px 2px 10px rgba(255, 255, 255, 0.2);
-    padding: 3%;
-    width: 100%;
-    max-width: 600px;
+    margin: 3rem 1rem 2rem 4rem;
+    border-radius: 0 .3rem .3rem 0;
 }
 
-.form__header {
-    padding-bottom: 3%;
+.form div {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0 0;
 }
 
 label {
@@ -79,8 +69,7 @@ label {
     font-size: 1.4rem;
 }
 
-input,
-button {
+input, button {
     width: 25rem;
     height: 3.4rem;
     outline: none;
@@ -89,171 +78,204 @@ button {
     padding-left: 1rem;
 }
 
-.result-container {
-    background-color: whitesmoke;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    position: relative;
-    font-size: 15px;
-    letter-spacing: 1px;
-    padding: 25x 10px;
-    height: 50px;
-    max-width: 100%;
-    border-radius: 10px;
-}
-
-.result-container #result {
-    word-wrap: break-word;
-    max-width: calc(100% - 40px);
-    color: #333;
-}
-
-.result-container .btn {
-    font-size: 20px;
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    height: 40px;
-    width: 40px;
-}
-
-.setting {
-    width: 100%;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
-    margin: 10px 0;
-}
-
 .btn {
-    border: none;
-    color: #222;
+    margin: 6rem 0;
+    font-size: 1.4rem;
+    color: #F2EFFB;
+    border-radius: .3rem;
     cursor: pointer;
-    font-size: 16px;
-    padding: 8px 12px;
-    background-color: #8DC4A5;
-    border-radius: 5px;
-}
-
-.btn-large {
-    display: block;
-    width: 100%;
-    margin-top: 3rem;
-}
-
-input[type="checkbox"] {
-    cursor: pointer;
-    width: 25px;
-    height: 25px;
-    background-color: #358759;
-    outline: none;
-    border-radius: 5px;
-    box-shadow: inset 0 0 3.5px #BEBCBE;
-    transition: 0.3s;
-}
-
-input:checked[type="checkbox"] {
-    background-color: #358759;
-}
-
-input[type="number"] {
-    padding-top: 5px;
-    padding-left: 1px;
-    width: 40px;
-    height: 25px;
-    border-radius: 1px;
-    border: none;
+    font-weight: 400;
     text-align: center;
-    font-size: 16px;
-    font-weight: bolder;
-    background-color: #B0B1D1;
+    background-color: #14A800;
+    border: .1rem solid #14A800;
+    transition: background-color .6s ease-out;
 }
 
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+.btn:hover {
+    background-color: #107702;
 }
+
+
+/* content right */
+.content__info {
+    margin: 2rem 1.5rem;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    border-radius: .3rem;
+}
+
+.message {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.user__info{
+    padding: 1.5rem 1rem;
+    font-size: 1.6rem;
+    border-bottom: 1px solid  #F2EFFB;
+}
+
+.password {
+   padding: 2.5rem 1rem;
+   display: flex;
+   align-items: center;
+   font-size: 1.6rem;
+   border-bottom: 1px solid  #F2EFFB;
+}
+
+.message__icons {
+    display: flex;
+    padding: 1.5rem 1rem;
+}
+
+.message__icons div {
+    width: 3rem;
+    height: 3rem;
+    text-align: center;
+    font-size: 1.8rem;
+    color: #656565;
+    background-color: #F2EFFB;
+    border-radius: 50%;
+    line-height: 3.5rem;
+    margin-right: 1.5rem;
+    opacity: .8;
+    transition: opacity .6s ease-out;
+    cursor: pointer;
+}
+
+.message__icons .delete {
+    background-color: #FF0000;
+    color: #F2EFFB;
+}
+
+.message__icons div:hover {
+    opacity: 1;
+}
+
 
 @media screen and (max-width: 499px) {
     .content {
         width: 100%;
+        margin: 2rem auto;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(2, max-content);
-        margin: 2rem auto;
+        padding: .4rem;
     }
+
     .content__left {
         grid-column: 1 / 1;
         grid-row: 1 / 2;
         box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-        margin: 1rem 1rem 3rem;
-        height: 100%;
-        width: 100%;
+        margin-left: 1rem;
+        height: 90%;
+        width: 95%;
+        margin: 3rem auto;
     }
+
     .form__container {
         height: 100%;
-        flex-wrap: wrap-reverse;
     }
-    input,
-    button {
+    
+    .content__right {
+        grid-column: 1 / -1;
+        grid-row:  2 / -1;
+    }
+
+    .content__info {
+        width: 95%;
+        margin: 3rem auto;
+    }
+
+    input , button {
         width: 15rem;
     }
-    .active {
-        margin-left: 26rem;
+
+    .form {
+        margin: 3rem 2rem 2rem 2rem;
+        border-radius: 0 .3rem .3rem 0;
     }
 }
 
+
 @media screen and (min-width: 500px) and (max-width: 999px) {
-    .main {
-        display: grid;
-        justify-items: center;
-    }
     .content {
-        max-width: fit-content;
+        width: 100%;
+        margin: 0 auto;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(2, max-content);
     }
+
     .content__left {
         grid-column: 1 / 1;
         grid-row: 1 / 2;
         box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-        margin: 2rem 3rem;
-        height: 100%;
-        width: 90%;
+        margin: 2rem auto;
+        height: 90%;
+        width: 95%;
     }
+
+    .side__items {
+        width: 45%;
+    }
+
     .form__container {
         height: 100%;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap-reverse;
     }
-    input,
-    button {
+    
+    .content__right {
+        grid-column: 1 / -1;
+        grid-row:  2 / -1;
+    }
+
+    .content__info {
+        width: 95%;
+        margin: 2rem auto;
+    }
+
+    input , button {
         width: 25rem;
     }
-    .active {
-        margin-left: 73%;
+
+    .form {
+        margin: 3rem 2rem 2rem 2rem;
+        border-radius: 0 .3rem .3rem 0;
     }
 }
 
 @media screen and (min-width: 1000px) and (max-width: 1299px) {
+    .content {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 5rem 1fr 1fr 5rem 1fr 5rem;
+        grid-template-rows: repeat(2, max-content);
+        margin: 2rem auto;
+    }
+
     .content__left {
         grid-column: 2 / 4;
         grid-row: 1 / 2;
         box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-        margin: 2rem 3rem;
+        margin: 2rem auto;
         height: 90%;
-        max-width: 100%;
+        width: 80%;
     }
-    input,
-    button {
+
+    .content__right {
+        grid-column: 4 / 6;
+        grid-row:  1 / -1;
+    }
+
+    .content__info {
+        margin: 2rem auto;
+    }
+
+    input , button {
         width: 20rem;
     }
-    .active {
-        margin-left: 22%;
+
+    .side__items {
+        width: 45%;
     }
 }

@@ -1,5 +1,5 @@
 html {
-    font-size: 75%;
+    font-size: 62.5%;
 }
 
 * {
@@ -16,6 +16,13 @@ body {
     background-color: #FFFFFF;
     line-height: 1.428571429;
     font-family: 'Josefin Sans', sans-serif;
+}
+
+.favicon {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .navbar {
@@ -48,8 +55,7 @@ body {
     position: relative;
 }
 
-.search__input,
-.modal__input {
+.search__input, .modal__input {
     width: 25rem;
     height: 3.8rem;
     background-color: #336278;
@@ -64,8 +70,7 @@ body {
     font-family: 'Josefin Sans', sans-serif;
 }
 
-.search__input::placeholder,
-.modal__input::placeholder {
+.search__input::placeholder, .modal__input::placeholder {
     color: #FFFFFF;
     font-weight: 300;
     font-family: 'Comic Neue', cursive;
@@ -93,7 +98,7 @@ body {
 
 .navbar__item a {
     color: #FFFFFF;
-    font-weight: 400;
+    font-weight: 300;
     transition: color .9s ease-in-out;
 }
 
@@ -124,53 +129,70 @@ body {
     cursor: pointer;
 }
 
+.highlight {
+    color: #14A800;
+    margin-top: .5rem;
+    font-size: 1.2rem;
+}
+
+.error {
+    color: #FF0000;
+}
 
 /* media queries */
-
 @media screen and (max-width: 700px) {
     .navbar {
         position: relative;
-        height: 6rem;
         justify-content: space-between;
     }
+
     .navbar__bars {
         display: block;
         margin-left: 1.4rem;
     }
-    .navbar__items,
-    .search {
+
+    .navbar__items, .search {
         display: none;
     }
+
     .logo {
         position: absolute;
         right: 47%;
         transform: translateX(47%);
     }
-    .footer__top {
+
+    .footer__top{
         flex-direction: column;
         align-items: flex-start;
     }
+
     .footer__item {
         margin: 2rem 0;
     }
+
     .footer__item a {
         margin-bottom: .3rem;
         font-size: 1.6rem;
     }
+ 
 }
 
-
 /* media queries */
-
 @media screen and (max-width: 400px) {
     .logo {
         position: absolute;
         right: 42.5%;
         transform: translateX(42.5%);
-        height: 4rem;
         width: 4rem;
+        height: 4rem;
     }
+
     #bars {
-        font-size: 2.2rem;
+        font-size: 1.6rem;
     }
+
+    .navbar {
+        height: 6rem;
+    }
+ 
 }
