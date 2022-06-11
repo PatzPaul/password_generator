@@ -148,8 +148,6 @@ submitButton.addEventListener('click', (event) => {
     contentRight.append(contentInfo)
 })
 
-// modal.appendChild(alertContainer)
-
 iconCopy.addEventListener('click', (event) => {
     event.preventDefault()
     const cb = navigator.clipboard

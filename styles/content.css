@@ -1,10 +1,3 @@
-* {
-    box-sizing: border-box;
-    font-family: 'Josefin Sans', sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
 .content {
     width: 100%;
     display: grid;
@@ -130,23 +123,6 @@ input, button {
    border-bottom: 1px solid  #F2EFFB;
 }
 
-.active {
-    margin-left: 31rem;
-    padding: .6rem .9rem;
-    font-size: 1.2rem;
-    font-weight: 300;
-    color: #F2EFFB;
-    background-color: #14A800;
-    border: .1rem solid #14A800;
-    border-radius: 2rem;
-    transition: opacity .3s ease-out;
-    cursor: pointer;
-}
-
-.active:hover {
-    opacity: .8;
-}
-
 .message__icons {
     display: flex;
     padding: 1.5rem 1rem;
@@ -215,10 +191,6 @@ input, button {
         width: 15rem;
     }
 
-    .active {
-        margin-left: 26rem;
-    } 
-
     .form {
         margin: 3rem 2rem 2rem 2rem;
         border-radius: 0 .3rem .3rem 0;
@@ -266,10 +238,6 @@ input, button {
         width: 25rem;
     }
 
-    .active {
-        margin-left: 73%;
-    }
-
     .form {
         margin: 3rem 2rem 2rem 2rem;
         border-radius: 0 .3rem .3rem 0;
@@ -309,9 +277,5 @@ input, button {
 
     .side__items {
         width: 45%;
-    }
-
-    .active {
-        margin-left: 22%;
     }
 }
